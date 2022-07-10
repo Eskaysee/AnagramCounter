@@ -23,12 +23,14 @@ public class AnagramService {
                     ACs.add(new AnagramCounter(word.length(), 0));
                 }
             }
-            ACs.get(word.length()-2).addWord(word);     //stores all dictionary words of particular length in the
+            String wrd = sorted(word);
+            ACs.get(word.length()-2).addWord(wrd);     //stores all dictionary words of particular length in the
                                                         //relevant anagramcounter
             //System.out.println("TODO process word: " + word + " and " + str);
         }
         for (AnagramCounter ac : ACs){
-            ArrayList<String> wrds = ac.getWords();     //for each anagramcounter we get the list of dictionary
+            ac.anagaramCount();
+            /*ArrayList<String> wrds = ac.getWords();     //for each anagramcounter we get the list of dictionary
                                                         //words that correspond with the anagram counter length
             while (!wrds.isEmpty()) {               //Loops for each unique anagram or word thats not an anagaram
                                                     //in the list
@@ -46,7 +48,7 @@ public class AnagramService {
                     ac.setCount(anaCount);
                 }
                 //System.out.println("Words Array Is Size: " + wrds.size());
-            }
+            }*/
         }
 
         // TODO: This is just a placeholder - you should change this
