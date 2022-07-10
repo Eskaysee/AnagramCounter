@@ -17,8 +17,8 @@ public class AnagramService {
             word.strip();
             if (word.length()>(ACs.size()+1)){              //create more anagramCounters if one doesn't exits
                                                             //for this word length
-                for (int i = ACs.size(); i<=(word.length()-2); i++){
-                    ACs.add(new AnagramCounter(word.length(), 0));
+                for (int i = ACs.size()+2; i<=word.length(); i++){
+                    ACs.add(new AnagramCounter(i, 0));
                 }
             }
             String wrd = sorted(word);
