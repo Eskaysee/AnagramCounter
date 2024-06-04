@@ -11,7 +11,6 @@ public class Main {
 
             long startTime = System.currentTimeMillis();
             List<AnagramCounter> anagramResults = new AnagramService().compute(dictionaryLocation);
-            //long endTime = System.currentTimeMillis();
             long endTime = System.currentTimeMillis();
             
             System.out.println();

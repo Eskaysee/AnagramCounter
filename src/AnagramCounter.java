@@ -42,7 +42,7 @@ public class AnagramCounter {
 
     public void anagaramCount(){
         for (String str : words.keySet()){
-            if (words.get(str)>1) setCount(++count);
+            if (words.get(str)>1) setCount(words.get(str)+count);
         }
     }
 
